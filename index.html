@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <!-- Custom Fonts -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
   </style>
   <script>
     tailwind.config = {
@@ -23,20 +25,38 @@
   </script>
   <title>Flower Shop</title>
 </head>
-<body class="text-[#8987A1] font-noto">
+
+<body class="text-[#8987A1] font-noto bg-[#F5F8FF]">
+  <!-- Header section start -->
   <header class="mt-[30px] max-w-[1140px] mx-auto px-[20px] sm:px-0">
-    <nav class="flex justify-between items-center">
-      <div class="logo w-[53px] sm:w-full">
-        <img src="./assets/logo.png" alt="Flower" >
+    <nav class="flex justify-between items-center mb-[28px]">
+      <div class="w-[53px] sm:w-full">
+        <img src="./assets/logo.png" alt="Flower">
       </div>
       <ul class="flex items-center gap-12">
-        <li class="hidden sm:block"><a class=" font-bold text-[#252432]" href="#">Home</a></li>
+        <li class="hidden sm:block"><a class=" font-bold text-[#E95A08]" href="#">Home</a></li>
         <li class="hidden sm:block"><a href="#">Shop</a></li>
         <li class="hidden sm:block"><a href="#">About</a></li>
         <li class="hidden sm:block"><a href="#">Contact</a></li>
-        <li class="block"><a class="flex items-center" href="#"><img class=" mr-[10px]" src="./assets/shopping-cart.png" alt="cart" >Cart ($56)</a></li>
+        <li class="block"><a class="flex items-center" href="#"><img class=" mr-[10px]" src="./assets/shopping-cart.png"
+              alt="cart">Cart ($56)</a></li>
       </ul>
     </nav>
   </header>
+  <!-- Header section start -->
+  <!-- Banner Section Start -->
+  <section class=" max-w-[1140px] mx-auto mb-[65px]">
+    <div class="flex flex-col gap-7">
+      <div class="bg-[url('./assets/hero-flower.png')] bg-cover bg-center h-[245px] bg-no-repeat">
+      </div>
+      <div class="px-[20px] sm:px-0">
+        <h1 class="font-noto font-bold text-[24px] text-[#000000] mb-[13px]">ALWAYS <span class="text-[#E95A08]">FRESH <br> FLOWERS</span></h1>
+        <p class=" text-[14px]">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+          roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Section End -->
 </body>
+
 </html>
