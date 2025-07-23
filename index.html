@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Tailwind CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Document</title>
+  <!-- Custom Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            noto: ['Noto Serif', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <title>Flower Shop</title>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="text-[#8987A1] font-noto">
+  <header class="mt-[30px] max-w-[1140px] mx-auto px-[20px] sm:px-0">
+    <nav class="flex justify-between items-center">
+      <div class="logo w-m-[53px] sm:w-full">
+        <img src="./assets/logo.png" alt="Flower" >
+      </div>
+      <ul class="flex items-center gap-12">
+        <li class="hidden sm:block"><a class=" font-bold text-[#252432]" href="#">Home</a></li>
+        <li class="hidden sm:block"><a href="#">Shop</a></li>
+        <li class="hidden sm:block"><a href="#">About</a></li>
+        <li class="hidden sm:block"><a href="#">Contact</a></li>
+        <li class="block"><a class="flex items-center" href="#"><img class=" mr-[10px]" src="./assets/shopping-cart.png" alt="cart" >Cart ($56)</a></li>
+      </ul>
+    </nav>
+  </header>
 </body>
 </html>
