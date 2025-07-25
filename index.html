@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Tailwind CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- Custom Fonts -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-
-  </style>
   <style>
     @keyframes spin {
       from {
@@ -25,24 +20,31 @@
     .trusted-badge {
       animation: spin infinite 10s linear;
     }
-
   </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-            noto: ['Noto Serif', 'serif'],
-          }
-        }
+  <!-- Google Fonts with Tailwind -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    @import "tailwindcss";
+
+    @layer utilities {
+      .font-noto {
+        font-family: "Noto Serif", 'serif';
+      }
+      .font-inter {
+        font-family: "inter", 'serif';
       }
     }
-  </script>
+    /* Gobal rules */
+    h1,h2,h3,h4,h5,h6{
+      font-family: "Noto Serif", 'serif';
+    }
+
+  </style>
   <title>Flower Shop</title>
 </head>
 
-<body class="text-[#8987A1] font-noto bg-[#F5F8FF]">
+<body class="text-[#8987A1]  bg-[#F5F8FF] font-inter">
   <!-- Header section start -->
   <header class="mt-[30px] max-w-[1140px] mx-auto px-[20px] mb-[28px] sm:mb-[226px] sm:px-4">
     <nav class="flex justify-between items-center ">
@@ -57,20 +59,20 @@
         <li class="block text-black">
           <a class="flex items-center" href="#">
             <img class=" mr-[10px]" src="./assets/shopping-cart.png" alt="cart">
-              <span>Cart($56)</span>
+            <span>Cart($56)</span>
           </a>
-          </li>
+        </li>
       </ul>
     </nav>
   </header>
   <!-- Header section start -->
   <!-- Banner Section Start -->
   <section class=" max-w-[1140px] mx-auto mb-[65px]">
-    <div class="flex flex-col items-end sm:flex-row sm:flex-row-reverse gap-7">
+    <div class="flex flex-col items-end  sm:flex-row-reverse gap-7">
       <div class="bg-[url('./assets/hero-flower.png')] bg-cover bg-center h-[245px] bg-no-repeat w-full">
       </div>
       <div class="px-[20px] sm:px-0 max-w-[570px]">
-        <h1 class="font-noto font-bold text-[24px] sm:text-[65px] text-[#000000] mb-[13px]">ALWAYS <span
+        <h1 class="font-inter font-bold text-[24px] sm:text-[65px] text-[#000000] mb-[13px]">ALWAYS <span
             class="text-[#E95A08]">FRESH
             <br> FLOWERS</span></h1>
         <p class=" text-[14px] sm:text-[22px]">Indulge your senses with the beauty and fragrance of our fresh flower
@@ -83,8 +85,7 @@
   <!-- Flower Plants Section Start -->
   <section class="max-w-[1140px] mx-auto px-[16px] sm:px-0 mb-[40px] sm:mb-[210px]">
     <div class="text-center">
-      <h1 class="font-noto font-bold text-[24px] sm:text-[50px] text-[#000000] mb-[16px]"><span
-          class="text-[#E95A08]">Our
+      <h1 class=" font-bold text-[24px] sm:text-[50px] text-[#000000] mb-[16px]"><span class="text-[#E95A08]">Our
         </span>Plants</h1>
       <p class=" text-[14px] sm:text-[22px]">
         Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms,
@@ -100,7 +101,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -109,7 +111,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -118,7 +121,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -127,7 +131,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -136,7 +141,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -145,7 +151,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -154,7 +161,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
       <div class="flex gap-[30px] flex-col text-[16px] ">
@@ -163,7 +171,8 @@
           <p class="font-medium">Lily Blossom</p>
           <p class="font-bold">20 USD</p>
         </div>
-        <button class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button">ADD TO
+        <button
+          class="cursor-pointer py-[19px] px-[30px] bg-[#E95A08] text-[#FFFFFF] font-semibold add-to-cart-button text-[12px] sm:text-[16px]">ADD TO
           CART</button>
       </div>
     </div>
@@ -205,7 +214,8 @@
         <span class="text-[#E95A08]">Latest</span> Deals
       </h1>
       <p class="text-[14px] sm:text-[22px]">
-        Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we
+        Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms,
+        we
         offer a wide variety of fresh.
       </p>
     </div>
@@ -213,26 +223,26 @@
     <div class="grid md:grid-flow-col grid-cols-1 md:grid-cols-3 grid-rows-2  gap-[20px]">
       <!-- Deal Cards -->
       <div
-        class="bg-[url('./assets/deal-bloom.png')] bg-black/60 bg-blend-overlay bg-cover bg-center h-[206px] border rounded-[22px] text-white flex items-center justify-center">
+        class="bg-[url('./assets/deal-bloom.png')] bg-black/60 sm:bg-black/40  bg-blend-overlay bg-cover bg-center h-[206px] border rounded-[22px] text-white flex items-center justify-center">
         <div class="text-center my-auto">
           <h2 class="font-bold text-[20px]">60% Off | Bloom Plant</h2>
-          <a href="#" class="underline text-[16px] font-semibold">Shop Now</a>
+          <a href="#" class="border-b-2 text-[16px] font-semibold">Shop Now</a>
         </div>
       </div>
 
       <div
-        class=" bg-[url('./assets/deal-ana.png')] bg-black/60 bg-blend-overlay bg-cover bg-center h-[206px] border rounded-[22px] text-white flex items-center justify-center">
+        class=" bg-[url('./assets/deal-ana.png')] bg-black/60 sm:bg-black/40  bg-blend-overlay bg-cover bg-center h-[206px] border rounded-[22px] text-white flex items-center justify-center">
         <div class="text-center my-auto">
           <h2 class="font-bold text-[20px]">30% Off | Ana Plant</h2>
-          <a href="#" class="underline text-[16px] font-semibold">Shop Now</a>
+          <a href="#" class="border-b-2 text-[16px] font-semibold">Shop Now</a>
         </div>
       </div>
 
       <div
-        class=" md:col-span-2 md:row-span-2 bg-[url('./assets/deal-zabo.png')] bg-black/60 bg-blend-overlay bg-cover bg-center h-[206px] md:h-full border rounded-[22px] text-white flex items-center justify-center">
+        class=" md:col-span-2 md:row-span-2 bg-[url('./assets/deal-zabo.png')] bg-black/60 sm:bg-black/40  bg-blend-overlay bg-cover bg-center h-[206px] md:h-full border rounded-[22px] text-white flex items-center justify-center">
         <div class="text-center my-auto">
-          <h2 class="font-bold text-[20px]">25% Off | Zabo Plant</h2>
-          <a href="#" class="underline text-[16px] font-semibold">Shop Now</a>
+          <h2 class="font-bold text-[20px] sm:text-[40px]">25% Off | Zabo Plant</h2>
+          <a href="#" class="border-b-2 text-[16px] sm:text-[28px] font-semibold">Shop Now</a>
         </div>
       </div>
     </div>
@@ -247,7 +257,8 @@
       <div class="flex justify-center px-[36px] w-full max-w-[830px]">
         <input type="email" placeholder="Write email"
           class="flex-1 py-[15px] px-[20px]  text-black focus:outline-none bg-white" />
-        <button class="cursor-pointer bg-[#E95A08] hover:bg-orange-600 text-white py-[19px] px-[12px] sm:px-[53px]  font-semibold">
+        <button
+          class="cursor-pointer bg-[#E95A08] hover:bg-orange-600 text-white py-[19px] px-[12px] sm:px-[53px]  font-semibold">
           Subscrib
       </div>
   </section>
